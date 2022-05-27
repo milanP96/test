@@ -73,8 +73,8 @@ class JsonStorage(BaseStorage):
                 self.to_rollback = self.to_rollback[:-1]
                 transactions_last_index = len(self.to_rollback) - 1
 
-
         self.prevent_write = True
+        raise BaseException('Rollback, something went wrong')
 
     def commit(self):
         self.prevent_write = False
