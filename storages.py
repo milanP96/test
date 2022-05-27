@@ -21,7 +21,7 @@ class BaseStorage:
 
 
 class JsonStorage(BaseStorage):
-    """Storage will work with dictionary"""
+    """Storage will work with JSON for persistent data"""
 
     def __init__(self):
         if not os.path.isfile('json_data.json'):
